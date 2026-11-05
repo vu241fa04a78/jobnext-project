@@ -16,8 +16,8 @@ domain.
    - `JWT_SECRET`: a long, random secret used to sign login tokens.
 3. In MongoDB Atlas, allow connections from your deployment. Do not commit the
    connection string or token secret to the repository.
-4. Deploy. The frontend calls the backend through `/api`, and visiting the
-   project root API endpoint should show “JobNest Backend is Running”.
+4. Deploy. The frontend calls the backend through `/api`; visiting `/api/jobs`
+   should return the current job list.
 
 For local development, the Vite server proxies `/api` requests to
 `http://localhost:5000`. Start the backend and frontend in separate terminals.
