@@ -1,0 +1,47 @@
+.applications-page {
+  min-height: 100vh;
+  padding: 50px 8%;
+  background: #f5f7fc;
+  font-family: Arial, sans-serif;
+}
+
+.applications-page h1 {
+  color: #172554;
+  font-size: 32px;
+}
+
+.applications-page > p {
+  color: #64748b;
+  margin: 12px 0 25px;
+}
+
+.applications-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.application-card {
+  background: white;
+  padding: 25px;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+.application-card h2 {
+  color: #3158ae;
+  margin-bottom: 15px;
+}
+
+.application-card p {
+  color: #475569;
+  margin: 12px 0;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.application-card a {
+  color: #3158ae;
+  font-weight: bold;
+}

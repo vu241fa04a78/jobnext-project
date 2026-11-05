@@ -1,0 +1,81 @@
+
+.companies-page {
+  min-height: 100vh;
+  background: #f5f7fc;
+  font-family: Arial, sans-serif;
+}
+
+.companies-hero {
+  text-align: center;
+  padding: 70px 20px;
+  background: linear-gradient(120deg, #102a56, #3158ae);
+  color: white;
+}
+
+.companies-hero h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.companies-hero p {
+  font-size: 17px;
+}
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 50px 7%;
+}
+
+.company-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.company-card:hover {
+  transform: translateY(-7px);
+}
+
+.company-logo {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  border-radius: 15px;
+  background: #e8efff;
+  color: #2454a6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.company-card h2 {
+  color: #102a56;
+  margin: 18px 0;
+}
+
+.company-card p {
+  color: #64748b;
+  margin: 12px 0;
+}
+
+.view-jobs-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 25px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 7px;
+  transition: 0.3s;
+}
+
+.view-jobs-btn:hover {
+  background: #102a56;
+}
