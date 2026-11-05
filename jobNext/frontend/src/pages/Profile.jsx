@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Profile.css";
+import API_BASE_URL from "../api";
 
 function Profile() {
   const [profile, setProfile] = useState({
@@ -28,7 +29,7 @@ function Profile() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        "http://localhost:5000/api/profile",
+        `${API_BASE_URL}/api/profile`,
         profile,
         {
           headers: {

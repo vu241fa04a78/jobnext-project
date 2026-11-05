@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import "./ApplyJob.css";
+import API_BASE_URL from "../api";
 
 function ApplyJob() {
   const { jobId } = useParams();
@@ -33,7 +34,7 @@ function ApplyJob() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/applications",
+        `${API_BASE_URL}/api/applications`,
         {
           ...formData,
           jobId

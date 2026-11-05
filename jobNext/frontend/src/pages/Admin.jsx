@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import "./Admin.css";
+import API_BASE_URL from "../api";
 
 function Admin() {
   const [form, setForm] = useState({
@@ -22,7 +23,7 @@ function Admin() {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/api/jobs", {
+      const response = await fetch(`${API_BASE_URL}/api/jobs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

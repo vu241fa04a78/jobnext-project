@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./PostJob.css";
+import API_BASE_URL from "../api";
 
 function PostJob() {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ function PostJob() {
 
     try {
       await axios.post(
-        "http://localhost:5000/api/jobs",
+        `${API_BASE_URL}/api/jobs`,
         formData
       );
 

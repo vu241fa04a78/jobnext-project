@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./RecruiterDashboard.css";
+import API_BASE_URL from "../api";
 
 function RecruiterDashboard() {
   const [jobs, setJobs] = useState([]);
@@ -11,7 +12,7 @@ function RecruiterDashboard() {
   const fetchJobs = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/jobs"
+        `${API_BASE_URL}/api/jobs`
       );
       setJobs(response.data);
     } catch (error) {
@@ -30,7 +31,7 @@ function RecruiterDashboard() {
 
     try {
       await axios.delete(
-        `http://localhost:5000/api/jobs/${id}`,
+        `${API_BASE_URL}/api/jobs/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import "./Jobs.css";
+import API_BASE_URL from "../api";
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
@@ -21,7 +22,7 @@ function Jobs() {
     const fetchJobs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/jobs"
+          `${API_BASE_URL}/api/jobs`
         );
 
         setJobs(response.data);
